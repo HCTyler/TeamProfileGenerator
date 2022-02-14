@@ -1,11 +1,10 @@
 {
-  "name": "wordguess",
+  "name": "team-profile-generator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "watch": "nodemon index",
     "test": "jest"
   },
   "author": "",
