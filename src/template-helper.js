@@ -59,11 +59,11 @@ const createTeam= team =>{
         )
      html.push(team
         .filer(employee=> employee.getRole() === "Engineer")
-        .map(manager=> createManager(manager))
+        .map(manager=> createEngineer(manager))
         )
     html.push(team
         .filer(employee=> employee.getRole() === "Intern")
-        .map(manager=> createManager(manager))
+        .map(manager=> createIntern(manager))
         )
 
     return html.join("")

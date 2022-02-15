@@ -7,13 +7,13 @@ test("set Github from constructor", () => {
   });
 
 test("get Github from function", ()=>{
-    const testValue= "ZenitsuDSP"
+    const testValue= "Engineer"
     const e= new Engineer("Zenitsu",201,"Zenitsu@demonslayer.org", testValue)
-    expect(e.getGithub()).toBe(testValue)
+    expect(e.getRole()).toBe(testValue)
 })
 
 test("get role from function, should be engineer", ()=>{
     const testValue= "Engineer"
     const e= new Engineer("Zenitsu",201,"Zenitsu@demonslayer.org", testValue)
-    expect(e.getRole()).toBe(testValue)
+    expect(e.getGithub()).toBe(testValue)
 })
