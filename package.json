@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
   "scripts": {
-    "start": "node index",
-    "test": "jest"
+    "test": "jest --verbose test/*",
+    "start": "node index.js",
+    "reset": "node reset.js"
   },
   "author": "",
   "license": "ISC",
