@@ -20,7 +20,7 @@ const createTeam= team =>{
 
     const createEngineer= engineer=> {
         return `
-        <div class="card managerCard">
+        <div class="card engineerCard">
             <div class="card-header">
                 <h4 class="card-title">${engineer.getName()}</h2>
                 <h5 class="card-title">${engineer.getRole()}</h3>
@@ -37,7 +37,7 @@ const createTeam= team =>{
 
     const createIntern= intern=> {
         return `
-        <div class="card managerCard">
+        <div class="card internCard">
             <div class="card-header">
                 <h4 class="card-title">${intern.getName()}</h2>
                 <h5 class="card-title">${intern.getRole()}</h3>
@@ -46,7 +46,7 @@ const createTeam= team =>{
                 <ul class="list-group text-dark">
                     <li class="list-group-item" id="id">ID: ${intern.getID()}</li>
                     <li class="list-group-item" id="email"><a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
-                    <li class="list-group-item" id="school">School: ${engineer.getSchool()}</a></li>
+                    <li class="list-group-item" id="school">School: ${intern.getSchool()}</a></li>
                 </ul>
             </div>
         </div>`

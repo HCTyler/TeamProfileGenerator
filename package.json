@@ -1,16 +1,15 @@
 {
-  "name": "unit10hw",
-  "version": "1.0.0",
-  "description": "OOP and testing for week 10 homework",
-  "main": "app.js",
+  "name": "",
+  "version": "",
+  "description": "",
+  "main": "",
   "directories": {
     "lib": "lib",
     "test": "test"
   },
   "scripts": {
     "test": "jest --verbose test/*",
-    "start": "node index.js",
-    "reset": "node reset.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",

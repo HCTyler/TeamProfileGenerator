@@ -43,8 +43,13 @@ function initApp() {
                 name: "managerId",
                 message: "What's the manager's ID?",
                 validate: answer => {
-                    if (answer !== "") {
+                  const duplicate= answer.match(/^[1-9]\d*$/)
+                    if (duplicate) {
+                      if(idArr.includes(answer)){
+                        return "ID value has already been taken. Please enter a different number."
+                      }else{
                         return true
+                      }
                     }
                     return "Please enter a valid Manager's ID."
                 }
@@ -54,10 +59,11 @@ function initApp() {
                 name: "managerEmail",
                 message: "What's the manager's email?",
                 validate: answer => {
-                    if (answer !== "") {
+                  const format= answer.match(/\S+@\S+\.\S+/)
+                    if (format) {
                         return true
                     }
-                    return "Email address can't be empty."
+                    return "Email address needs to be valid."
                 }
             },
             {
@@ -227,8 +233,6 @@ function initApp() {
             fs.mkdirSync(DIST_DIR)
         }
         console.log("Generating Team Profile.... ")
-        console.log(outputPath)
-        console.log(teamArr)
         fs.writeFileSync(outputPath,render(teamArr), "utf-8")
     }
 
