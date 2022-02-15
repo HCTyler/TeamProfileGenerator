@@ -14,7 +14,8 @@ const createTeam= team =>{
                     <li class="list-group-item" id="officeNumber"><a href="tel:${manager.getOfficeNumber()}">Office Number: ${manager.getOfficeNumber()}</a></li>
                 </ul>
             </div>
-        </div>`
+        </div>
+            `
     }
 
     const createEngineer= engineer=> {
@@ -54,22 +55,22 @@ const createTeam= team =>{
     const html= []
 
     html.push(team
-        .filer(employee=> employee.getRole() === "Manager")
+        .filter(employee=> employee.getRole() === "Manager")
         .map(manager=> createManager(manager))
         )
      html.push(team
-        .filer(employee=> employee.getRole() === "Engineer")
+        .filter(employee=> employee.getRole() === "Engineer")
         .map(manager=> createEngineer(manager))
         )
     html.push(team
-        .filer(employee=> employee.getRole() === "Intern")
+        .filter(employee=> employee.getRole() === "Intern")
         .map(manager=> createIntern(manager))
         )
 
     return html.join("")
 }
 
-module.export= team=>{
+module.exports= team=>{
     return`
     <!DOCTYPE html>
 <html lang= "en">
@@ -96,7 +97,6 @@ module.export= team=>{
         <div class="row">
             <div class="col-12 d-flex justify-content-around">
                 ${createTeam(team)}
-
             </div>
         </div>
     </div>
